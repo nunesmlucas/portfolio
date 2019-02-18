@@ -11,10 +11,6 @@ body {
     background-color: #3a3a3a;
 }
 
-.projects {
-    border-radius: 5px;
-}
-
 a, abbr, acronym, address, applet, article, aside, audio, b, big, blockquote, body, canvas, caption, center, cite, code, dd, del, details, dfn, div, dl, dt, em, embed, fieldset, figcaption, figure, footer, form, h1, h2, h3, h4, h5, h6, header, hgroup, html, i, iframe, img, ins, kbd, label, legend, li, mark, menu, nav, object, ol, output, p, pre, q, ruby, s, samp, section, small, span, strike, strong, sub, summary, sup, table, tbody, td, tfoot, th, thead, time, tr, tt, u, ul, var, video {
     margin: 0;
     padding: 0;
@@ -100,11 +96,15 @@ h1 {
 }
 
 @-webkit-keyframes slide {
-    0% { left: 0; }
+    0% {
+        left: 0;
+    }
 }
 
 @keyframes slide {
-    0% { left: 0; }
+    0% {
+        left: 0;
+    }
 }
 
 .animate {
@@ -186,4 +186,71 @@ b {
         background: #fff;
         padding: 10%
     }
+}
+
+#nameFront:after {
+    content: '';
+    position: absolute;
+    left: 0;
+    display: inline-block;
+    height: 1em;
+    width: 100%;
+    border-bottom: 1px solid;
+    margin-top: 10px;
+    opacity: 0;
+    -webkit-transition: opacity 0.35s, -webkit-transform 0.35s;
+    transition: opacity 0.35s, transform 0.35s;
+    -webkit-transform: scale(0, 1);
+    transform: scale(0, 1);
+}
+
+#nameFront:hover:after {
+    opacity: 1;
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+
+/* Underline From Left */
+
+.container {
+    position: relative;
+    width: 50%;
+    padding: 3px;
+}
+
+.image {
+    display: block;
+    height: 200px;
+    width: 280px;
+    border-radius: 3px;
+}
+
+.overlay {
+    position: absolute;
+    top: 210;
+    bottom: 0;
+    left: 2;
+    right: 2;
+    height: 203px;
+    width: 280px;
+    opacity: 0;
+    transition: .5s ease;
+    background-color: rgb(58, 81, 88);
+    border-radius: 3px;
+}
+
+.container:hover .overlay {
+    opacity: 1;
+}
+
+.text-animation {
+    color: white;
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
 }
