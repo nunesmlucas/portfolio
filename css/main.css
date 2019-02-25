@@ -168,9 +168,9 @@ p {
 b {
     font-family: Medium
 }
-h2{
-    font-family: 'Muli', 'Nunito', sans-serif;
 
+h2 {
+    font-family: 'Muli', 'Nunito', sans-serif;
 }
 
 @media screen and (max-width:667px) {
@@ -215,6 +215,7 @@ h2{
     -webkit-transform: scale(1);
     transform: scale(1);
 }
+
 /* Underline From Left */
 
 .container {
@@ -250,18 +251,18 @@ h2{
 
 .text-animation {
     color: white;
-    font-size: 20px;
+    font-size: 16px;
     position: absolute;
     top: 50%;
     left: 50%;
     -webkit-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    text-align: center;
+    text-align: left;
 }
 
-
 /* Float Shadow */
+
 .hvr-float-shadow {
     display: inline-block;
     vertical-align: middle;
@@ -273,8 +274,9 @@ h2{
     transition-duration: 0.3s;
     -webkit-transition-property: transform;
     transition-property: transform;
-  }
-  .hvr-float-shadow:before {
+}
+
+.hvr-float-shadow:before {
     pointer-events: none;
     position: absolute;
     z-index: -1;
@@ -291,15 +293,25 @@ h2{
     transition-duration: 0.3s;
     -webkit-transition-property: transform, opacity;
     transition-property: transform, opacity;
-  }
-  .hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
+}
+
+.hvr-float-shadow:hover, .hvr-float-shadow:focus, .hvr-float-shadow:active {
     -webkit-transform: translateY(-5px);
     transform: translateY(-5px);
     /* move the element up by 5px */
-  }
-  .hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
+}
+
+.hvr-float-shadow:hover:before, .hvr-float-shadow:focus:before, .hvr-float-shadow:active:before {
     opacity: 1;
     -webkit-transform: translateY(5px);
     transform: translateY(5px);
     /* move the element down by 5px (it will stay in place because it's attached to the element that also moves up 5px) */
-  }
+}
+
+.project-section {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+}
+#contact-info{
+    margin-top: 80px;
+}
